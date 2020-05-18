@@ -1,0 +1,422 @@
+PART 2 PYTHON
+
+
+DEBUGGING AND ERROR HANDLING
+
+
+- COMMON ERRORS:
+- SyntaxError - typo
+- NameError - variable is not defined
+- TypeError - mismatch of data types
+
+- IndexError - accessing an invalid index in a list, tuple
+- KeyError - when accessing an invalid key
+- ValueError - if a function receives an argument an inappropriate value
+
+- AttributeError - trying to use a method that is not valid
+
+
+- RAISING OUR OWN ERRORS, CREATING CUSTOM MESSAGE
+- raise SyntaxError("Putang ina mo ang bobo mo po")
+- def colorize(text, color):
+    colors = ("red", "orange", "black")
+    if type(color) is not str:
+        raise TypeError("Color must be a str data type")
+    if type(text) is not str:
+        raise TypeError("Text must be a str data type")
+    if color not in colors:
+        raise ValueError("Color is invalid color")
+    print(f"Printed text {text} in {color}")    
+- colorize("hello", "brown")
+
+
+- TRY AND EXCEPT BLOCKS
+- try:
+    add_numbers
+except:
+    print("This is try and except shit")
+
+- def get(d,key):
+	try:
+		return d[key]
+	except KeyError:
+		return None
+- d = {"name": "Ricky"}
+- print(get(d, "city"))
+- d["city"]
+
+
+- TRY, EXCEPT, ELSE, FINALLY
+- while True:
+	try:
+		num = int(input("please enter a number: "))
+	except ValueError:
+		print("That's not a number!")
+	else:
+		print("Good job, you entered a number!")
+		break
+	finally:
+		print("RUNS NO MATTER WHAT!")
+- print("REST OF GAME LOGIC RUNS!")
+
+
+- DEBUGGING WITH PDB
+- FIRST EXAMPLE:
+# import pdb
+# first = "First"
+# second = "Second"
+# pdb.set_trace()
+# result = first + second
+# third = "Third"
+# result += third
+# print(result)
+
+
+# Be careful with variable names!
+def add_numbers(a, b, c, d):
+    import pdb; pdb.set_trace() 
+
+    return a + b + c + d
+add_numbers(1,2,3,4)
+
+# ===================
+# NOTES  NOTES  NOTES
+# ===================
+# import pdb
+# pdb.set_trace()
+
+# Also commonly on one line:
+# import pdb; pdb.set_trace()
+
+# Common PDB Commands:
+# l (list)
+# n (next line)
+# p (print)
+# c (continue - finishes debugging)
+
+
+MODULES
+
+
+*** built-in python modules - go to python website
+
+
+- import random
+- print(random.choice(["apple", "banana", "cherry", "durian"]))
+- print(random.randint(1, 10))
+
+- import random as r
+- print(r.choice(["apple", "banana", "cherry", "durian"]))
+- print(r.randint(1, 10))
+
+- from random import choice, randint
+- print(choice(["apple", "banana", "cherry", "durian"]))
+- print(randint(1,100))
+
+- from random import choice as pick, randint as magic_number_chooser
+- print(pick(["apple", "banana", "cherry", "durian"]))
+- print(magic_number_chooser(1,100))
+
+
+*** custom modules
+
+
+- create 2 python files
+- import the file1 to file2
+import file1 # put this inside file2
+
+- run the functions declared inside file1
+print(file.greet()) # run this inside file2
+
+- from file1 import greet as g # other way of importing
+
+
+*** installing external modules - go back here 22 - 220
+
+
+- go to https://pypi.org/ for list of modules available, pip
+
+- installing the termcolor package
+python -m pip install termcolor # command to install a module
+help(termcolor) # to see the available functions and options
+
+
+from termcolor import colored
+t = colored("This is it! You're progressing", color="blue", on_color="on_magenta", attrs=["blink"])
+print(t)
+
+
+- go back to 221 for using the termcolor, pyfiglet package
+
+
+*** autopep8 package
+
+
+- used to clean up your code, to fix the code
+- go back to 222 to learn autopep8 package
+
+
+*** the __name__ variable
+
+- to show if the function is in the main python file or imported python file on the main file
+- it shows __main__ if its executed in the main python file
+- if the file is the main file being run, its value is __main__
+
+- if __name__ == "__main__" # to make sure that it only runs on the main file
+
+
+23 Making http requests with python (OPTIONAL) let's skip this shit for now
+
+
+OOP
+
+
+- class is a blueprint for object
+- object is an instance of a class
+help(list) # to see the other methods of this list class
+
+- encapsulation is the grouping of public and private attributes and methods into a programmatic class, making abstraction possible
+- abstraction is exposing only relevant data in a class interface, hiding private attributes and methods from users
+
+- creating a class
+class User:
+  pass
+
+user1 = User()
+print(type(user1))
+
+*** adding instance attributes
+
+class User:
+  def __init__(self, first, last, age): # 3 instance attributes
+    self.name = first
+    self.last = last
+    self.age = age
+
+user1 = User("Rommel", "Pogi", 29)
+print(user1.name)
+
+
+*** dunder methods and name mangling
+
+
+- single underscore
+- _name = it's a private variable
+
+- double underscore
+- it activates name mingling
+- uses to avoid naming conflicts in subclasses
+class User:
+  def __init__(self, first, last, age):
+    self.name = first
+    self.last = last
+    self.age = age
+    self.__msg = "this is name mingling" # with 2 underscores
+
+user1 = User("Rommel", "Pogi", 29)
+print(user1._User__msg) # to activate an attribute with 2 underscores
+
+
+- 3 underscores
+- only used on python specific methods
+
+
+*** adding instance methods
+
+
+# A User class with both instance attributes and instance methods
+class User:
+	def __init__(self, first, last, age): # instance attributes
+		self.first = first
+		self.last = last
+		self.age = age
+
+	def full_name(self): # instance methods
+		return f"{self.first} {self.last}"
+
+	def initials(self): # instance methods
+		return f"{self.first[0]}.{self.last[0]}."
+
+	def likes(self, thing): # instance methods
+		return f"{self.first} likes {thing}"
+
+	def is_senior(self): # instance methods
+		return self.age >= 65
+
+	def birthday(self): # instance methods
+		self.age += 1
+		return f"Happy {self.age}th, {self.first}"
+
+
+user1 = User("Joe", "Smith", 68)
+user2 = User("Blanca", "Lopez", 41)
+
+print(user1.likes("Ice Cream")) # invoking the instance methods
+print(user2.likes("Chips")) # invoking the instance methods
+
+print(user2.initials())
+print(user1.initials())
+
+print(user2.is_senior())
+print(user1.age) #Print age before we update it
+print(user1.birthday()) #updates age
+print(user1.age) #Print new value of age
+
+
+*** class attributes
+
+
+# A User class with both a class attribute
+class User:
+
+	active_users = 0 # this is the class attribute
+
+	def __init__(self, first, last, age):
+		self.first = first
+		self.last = last
+		self.age = age
+		User.active_users += 1 # manipulating class attribute
+
+	def logout(self):
+		User.active_users -= 1 # manipulating class attribute
+		return f"{self.first} has logged out"
+
+	def full_name(self):
+		return f"{self.first} {self.last}"
+
+	def initials(self):
+		return f"{self.first[0]}.{self.last[0]}."
+
+	def likes(self, thing):
+		return f"{self.first} likes {thing}"
+
+	def is_senior(self):
+		return self.age >= 65
+
+	def birthday(self):
+		self.age += 1
+		return f"Happy {self.age}th, {self.first}"
+
+print(User.active_users)
+user1 = User("Joe", "Smith", 68)
+user2 = User("Blanca", "Lopez", 41)
+print(User.active_users)
+print(user2.logout())
+print(User.active_users)
+
+
+*** class methods
+
+
+# A User class with both instance attributes and instance methods
+class User:
+	active_users = 0
+
+	@classmethod # class method
+	def display_active_users(cls):
+		return f"There are currently {cls.active_users} active users"
+
+	@classmethod
+	def from_string(cls, data_str):
+		first,last,age = data_str.split(",")
+		return cls(first, last, int(age))
+
+	def __init__(self, first, last, age):
+		self.first = first
+		self.last = last
+		self.age = age
+		User.active_users += 1
+
+	def logout(self):
+		User.active_users -= 1
+		return f"{self.first} has logged out"
+
+	def full_name(self):
+		return f"{self.first} {self.last}"
+
+	def initials(self):
+		return f"{self.first[0]}.{self.last[0]}."
+
+	def likes(self, thing):
+		return f"{self.first} likes {thing}"
+
+	def is_senior(self):
+		return self.age >= 65
+
+	def birthday(self):
+		self.age += 1
+		return f"Happy {self.age}th, {self.first}"
+
+# user1 = User("Joe", "Smith", 68)
+# user2 = User("Blanca", "Lopez", 41)
+# print(User.display_active_users())
+# user1 = User("Joe", "Smith", 68)
+# user2 = User("Blanca", "Lopez", 41)
+# print(User.display_active_users())
+
+
+
+
+go back to 24 - 246
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

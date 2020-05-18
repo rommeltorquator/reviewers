@@ -1,0 +1,64 @@
+GIT COMMANDS
+
+- git init
+- git remote add origin "https://github.com/rommeltorquator/git-github.git"
+- git pull origin master
+
+- git status
+- git add index.html
+- git commit -m "First version"
+
+- git add -A
+- git commit -a -m "added about.html"
+
+- git log
+
+BRANCHING:
+
+- git branch -a (to check the names of the branches)
+- git branch firstBranch
+- git checkout firstBranch
+- git add -A
+- git commit -m "making changes in firstBranch"
+
+MERGING:
+
+- merge the branches in the master (master is always the destination)
+
+- git merge firstBranch
+
+REBASING:
+
+- git rebase master
+- git rebase firstBranch
+
+PUSH:
+
+- git push origin master
+- git push origin firstBranch (automatically creates branch)
+
+EXTRA COMMANDS:
+
+- clear
+
+REVERT:
+
+- git log (get the first 8 digits of hash)
+- git checkout 28ds872s index.html
+
+
+GO BACK TO 1:20:11
+
+
+
+
+
+
+
+
+
+
+
+
+
+

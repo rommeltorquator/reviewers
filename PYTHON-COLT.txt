@@ -1,0 +1,803 @@
+19T091090
+
+
+WINDOWS COMMAND LINE FUNDAMENTALS
+
+
+- ls
+- pwd
+- cd C:\Users
+- cd ..
+- cd ~ (goes to root directory)
+- cd ~\desktop (goes directly to a specific directory)
+
+- mkdir catpics (create folder)
+- touch index.html (create file)
+
+- rm index.html
+- rm -r catpics (deleting the folder)
+
+
+INTS AND FLOATS AND DIFFERENT OPERATORS
+
+
+- type(1.9)
+- +, -, *, /, //, %, **
+- # this is a comment
+- FLOAT HAS ALWAYS A DECIMAL VALUE, WHILE INT IS A WHOLE NUMBER
+
+
+VARIABLES AND STRINGS
+
+
+- age = 29
+- name = 'Rommel'
+- reassigning variable
+- str, agi, int = 75, 89, 94
+
+- naming restrictions and conventions (first_name, firstName, TAX, __dunder__)
+- bool, int, str, list, dict # data types
+- dynamic typing = changing data type of a variable
+- awesomeness = None (None represents nothingness)
+
+- STRING ESCAPE SEQUENCES = \n, \", \\
+- STRING CONCATENATION USING +
+- str1 += ' Torquator'
+- +=, -+, *=
+
+- F STRING
+- statement = f"This is the name: {name}"
+- total = f"The total is: {x + 1}"
+- print(name[0]), print(name[-1])
+
+- CONVERSION FUNCTIONS
+- print(int(grade))
+- print(str(age))
+- print(float(age))
+- print(list(range(1, 6))
+
+- print("How many kilometers did you cycle today?")
+- total = input()
+- round(total, 2)
+
+
+BOOLEAN AND CONDITIONAL LOGIC
+
+
+- name = input("Enter your name: ")
+
+- name = 'Toshi'
+
+if name == 'Toshi':
+	print('This is tosh')
+elif name == 'Melo':
+	print('Melo Melo')
+else:
+	print('None')
+
+- USE IN EXAMPLE (if "name" in customer) # dictionary example
+
+- YOU CAN ADD MULTIPLE ELIFS
+- TRUTHINESS AND FALSINESS
+- ==, !=, <, >, <=, >= (comparison operators)
+- AND, OR (logical operators)
+- NOT
+- name is 'Rommel' (checking if stored in the same memory)
+
+- ROCK PAPER SCISSOR GAME = 09
+
+
+LOOPING IN PYTHON
+
+
+- FOR LOOP
+
+- for char in "coffee":
+	print(char)
+
+- for x in range(1, 10): # prints 1 to 9
+	print(x)
+
+- for x in range(6): # prints 0 to 5
+	print(x)
+
+- for x in range(1, 11, 2): # third parameter is the skip
+	print(x)
+
+- WHILE LOOP
+
+- msg = input("Whats the secret password? ")
+- while msg != 'bananas':
+	print('Wrong!')
+	msg = input("Whats the secret password? ")
+- print('Correct dumbass!')
+
+- x = 1
+- while x < 10:
+	print(x)
+	x += 1
+
+- for x in range(1, 11): # TRIANGE LOOP EXAMPLE
+	print("x" * x)
+
+- BREAK, CONTINUE
+- GUESSING GAME example = 11
+- AUTO PEP-8
+
+
+LISTS
+
+
+- tasks = ['install python', 'learn python', 'take a break']
+- len(tasks)
+
+- r = range(1, 6)
+- list(r)
+
+- print(colors[0])
+- print(colors[-1])
+
+- if "orange" in colors:
+	print("Good choice")
+
+- FOR LOOP example
+- WHILE LOOP example
+
+- names.append('toshi')
+- names.extend(['toshi', 'tukol'])
+- names.insert(2, 'toshi')
+
+- names.clear()
+- names.pop()
+- names.pop(2) # if you know the index
+- names.remove('melo') # if you know the value
+
+- names = ['tae', 'tao', 'gago']
+- names.index('tae')
+- names.index('tae', 1) # 1 is the start of search
+
+- age.reverse()
+- age.sort()
+
+- names = ['tae', 'tao', 'gago']
+- ' '.join(names) # THIS METHOD IS FOR LIST
+
+- SLICING IN LIST
+- names[1:10]
+- names[1:]
+- names[:10]
+- names[-2:]
+- names[:-1]
+- names[::-1]
+- names[1::2]
+- names[1::-1]
+- names[:1:-1]
+- SLICING IS USED TO REVERSE A STRING
+- THIRD ARG IS FOR THE STEP
+- number[0], number[1] = number[1], number[0] # swapping value
+
+
+LIST COMPREHENSIONS
+
+
+- nums = [2, 3, 6]
+- nums = [x * 3 for x in nums]
+
+- items = [0, '', [], True, 1]
+- items = [bool(x) for x in items]
+- print(items)
+
+- # (LIST COMPREHENSION) ONLY IF
+- numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+- evens = [num * 2 for num in numbers if num % 2 == 0]
+- print(evens)
+
+- # (LIST COMPREHENSION) WITH ELSE
+- num2 = [1, 2, 3, 4, 5]
+- new = [num * 2 if num % 2 == 0 else num / 2 for num in num2]
+- print(new)
+
+- sentence = "This is so much fun!"
+- print(''.join(letter for letter in sentence if letter not in 'aeiou'))
+
+- NESTED LISTS
+- lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+- print(lists[1][1])
+
+- lists = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+- for list in lists:
+	for l in list:
+		print(l)
+
+- NESTED LIST COMPREHENSION
+- lists = [[1, 2, 3]]
+- [[print(l) for l in lists] for x in range(1, 4)]
+
+
+DICTIONARY
+
+
+- cat = {
+	"name": "blue",
+	"age": 3.5,
+	"isCute": True
+}
+- print(cat["name"])
+- cat2 = dict(name = "kitty")
+- cat2 = dict(age = 3)
+- print(cat2["age"])
+
+- LOOPING DICTIONARIES EXAMPLE
+- print(cat.keys())
+- print(cat.values())
+- print(cat.items())
+
+- print("name" in cat.keys()) # ONLY LOOKS FOR KEY
+- print("name" in cat.values()) # FOR VALUES
+
+- print("name" in cat) # USING IN IN DICTIONARY
+
+
+- cust = {
+	'name': 'kobe',
+	'age': 41
+}
+- c = cust.copy() # COPY
+- new.update(d) # NEW IS AN EMPTY DICTIONARY, D IS A DICTIONARY
+
+- list1 = [1, 2, 3, 4]
+- newDict = {}.fromkeys(range(1, 5), 10) # FROMKEYS, 10 is the value
+- customers.get('name') # NAME IS THE KEY
+
+- dict.pop('name') # NEEDS TO ADD 1 ARGUMENT
+- d.popitem() # DOESN'T NEED TO HAVE 1 ARGUMENT
+- customers.clear() # CLEAR
+
+- TO ADD ANOTHER ELEMENT
+- customer["gadget"] = "pc"
+
+- DICTIONARY COMPREHENSION
+- newDict = { x: x ** 2 for x in [1, 2, 3, 4, 5]}
+- print(newDict)
+
+- instructor = {
+	'name': 'toshi',
+	'city': 'makati',
+	'color': 'orange'
+}
+- yelling_instructor = {x: y.upper() for x, y in instructor.items()}
+- new = {"This is key: " + x: bool(y) for x, y in cust.items()}
+
+- WITH IF ELSE
+- nums = [1, 2, 3, 4, 5]
+- newDict = {x: ("even" if x % 2 == 0 else "odd") for x in nums}
+- print(newDict)
+
+- nums = {
+    'age': 20,
+    'money': 1000,
+    'grade': 95
+}
+- print({("Gago" if x == 'age' else x): (y * 2 if y % 2 == 0 else y + 100) for x, y in nums.items()})
+
+
+TUPLE
+
+
+- IMMUTABLE
+- LIGHT-WEIGHT
+
+- numbers = (1, 2, 3, 4)
+- examples (months, alphabet)
+- tup = tuple(1, 2, 3)
+
+- TUPLE IS USED AS A KEY TO A DICTIONARY # CITIES EXAMPLE
+- FOR LOOP USING TUPLE EXAMPLE
+- WHILE LOOP USING TUPLE EXAMPLE
+
+- numbers.count(1)
+- numbers.index('toshi')
+- NESTED TUPLE EXAMPLE
+- SLICING IN TUPLE
+
+
+SETS
+
+
+- NO DUPLICATE VALUES
+- LIGHT-WEIGHT
+- CANNOT ACCESS USING INDEX
+
+- s = {1, 4, 6}
+- s = set() # FOR EMPTY SET
+- s = set(range(10))
+- 4 in s # True
+
+- FOR LOOP EXAMPLE
+- CREATE A SET USING A LIST
+
+- s.add('tae') # APPEND IN LIST
+- newSet = s.copy() # SAVED IN DIFF MEMORY
+- s.update([5, 6, 7]) # EXTEND IN LIST
+
+- s.remove('tae')
+- s.discard('tae') # TO AVOID HAVING ERROR
+- s.clear()
+
+- SET MATH
+- math_students = {"matt", "helen", "prashant", "james", "aparna"}
+- bio_students = {"jane", "matt", "charlotte", "mesut", "oliver", "james"}
+
+- students = math_students | bio_students # UNION
+- students = math_students & bio_students # INTERSECTION
+
+- SET COMPREHENSION
+- newSet = {x ** 2 for x in range(9)}
+
+
+FUNCTION
+
+
+- def greet_them():
+	print("Hi!")
+- greet_them()
+
+- RETURN KEYWORD
+- def square_of_seven():
+	return 7 ** 2
+
+- WITH PARAMETERS
+- def greet(name, age):
+	return f"My name is {name}, and I am {age} years old"
+
+- print(greet("Rommel", 29))
+
+- DEFAULT PARAMETERS, YOU CAN PASS OR NOT PASS VALUE ON ARGUMENT
+- def greet(name, age=29, school="Mapua"):
+	return f"My name is {name}, and I am {age} years old"
+
+- FUNCTION AS AN ARGUMENT
+- print(greet(name="Rommel", age=29)) #KEYWORD ARGUMENTS
+- VARIABLE SCOPE IN A FUNCTION (GLOBAL VARIABLE, 
+- total = 0
+- def nums():
+	global total # to be able to manipulate a global variable inside function
+	total += 1
+	return total
+
+- NONLOCAL # VARIABLE INSIDE A FUNCTION USED BY ANOTHER FUNCTION
+
+- DOCSTRING (VIDEO 17 - 160)
+
+
+FUNCTIONS PART 2
+
+
+- *args # IT STORES IN A TUPLE
+- def sum_of_all(*args):
+	total = 0
+	for x in args:
+		total += x
+	return total
+- print(sum_of_all(100, 200, 300, 400))
+
+- **kwargs # STORES IN A DICTIONARY
+- def customer(**kwargs):
+	for x, y in kwargs.items():
+		print(f"{x}'s favorite color is {y}")
+- customer(rommel="red", mabel="blue", lhen="orange")	
+
+- ORDERING PARAMETERS
+- parameters, *args, default parameters, **kwargs
+- def display_info(a, b, *args, instructor="Rommel", **kwargs):
+
+- TUPLE UNPACKING
+- num = [1, 2, 3, 4, 5]
+- def add_all(*args):
+	total = 0
+	for x in args:
+		total += x
+	return total
+- print(add_all(*num)) # TUPLE UNPACKING
+
+- a = ("MNNIT Allahabad", 5000, "Engineering")
+- (college, student, type_ofcollege) = a
+- print(college) 
+- print(student)
+- print(type_ofcollege)
+
+- DICTIONARY UNPACKING
+- names = {
+	"first": "Rommel",
+	"last": "Pogi"
+}
+- def greet(first, last):
+	print(f"My first name is {first}, and last is {last}")
+- greet(**names) # DICTIONARY UNPACKING
+
+
+LAMBDA
+
+- SINGLE-LINE FUNCTION
+- numb = lambda num: num * num
+- print(numb(10))
+
+- add = lambda x, y: x + y
+- print(add(20, 50))
+
+- greeting = lambda : "Hello World!"
+- print(greeting())
+
+
+MAP
+
+
+- HAS 2 ARGUMENTS, FUNCTIONS or LAMBDA AND (LIST, STRING, DICTIONARY, TUPLE, SET)
+- nums = [1, 2, 3, 4, 5]
+- doubles = list(map(lambda x: x * 2 , nums))
+
+- names = ['Rommel', 'Toshiro', 'Melo', 'Toshi']
+- uppers = list(map(lambda name: name.upper() , names))
+
+
+FILTER
+
+
+- names = ['Rommel', 'Toshiro', 'Melo', 'Toshi', 'Tony']
+- first_a = list(filter(lambda name: name[0] == 'T', names))
+- FIND MORE EXAMPLES
+- COMBINING MAP AND FILTER EXAMPLE
+
+
+ALL
+
+
+- names = ['Rommel', 'Toshi', 'Tony', 'Tosh', 'Tae']
+- print(all(names)) # RETURNS TRUE
+
+
+ANY
+
+
+- names = ['Rommel', 'Toshi', 'Tony', 'Tosh', 'Tae', '', 'Sex']
+- print(any(names)) # RETURNS TRUE
+
+- names = ['', '', '']
+- print(any(names))
+
+
+GENERATOR EXPRESSIONS = GO BACK TO 191
+
+
+SORTED - go back here
+
+
+- IT DOESN'T CHANGE THE ORIGINAL VARIABLE, CAN PASS A LAMBDA
+- names = ['tae', 'toshi', 'sven', 'apparition']
+- print(sorted(names))
+
+- print(sorted(names, reverse=True)) # WITH REVERSE ARGUMENT
+- SORTING DICTIONARY EXAMPLE # INCLUDE LAMBDA
+
+
+MIN AND MAX - go back here
+
+
+- nums = [1, 2, 3, 4, 5]
+- print(min(nums))
+- print(max(nums))
+
+- names = ['tae', 'toshi', 'abbadon', 'lina', 'zeus']
+- print(max(names))
+
+- WITH LAMBDA
+- print(min(names, key=lambda x: len(x)))
+
+- DICTIONARY EXAMPLE
+- songs = [
+    {"name": "Dog", "playcount": 1},
+    {"name": "Cat", "playcount": 2},
+    {"name": "Tae", "playcount": 3},
+    {"name": "Aso", "playcount": 4},
+    {"name": "Echas", "playcount": 5}
+]
+- print(min(songs, key=lambda s: s["playcount"]))
+
+
+REVERSED - go back here
+
+
+LEN - go back here
+
+
+ABS, SUM, ROUND
+
+
+- print(abs(-100))
+- print(sum([1, 10, 20, 33])) # WORKS WITH LIST AND TUPLE
+- print(round(100.283798127, 3))
+
+
+ZIP - go back here
+
+
+- l1 = [1, 2, 3, 4, 5]
+- l2 = [6, 7, 8, 9, 10]
+- z = zip(l1, l2)
+- print(list(z)) # BECOMES A LIST OF TUPLES
+- GO BACK TO 203
+
+
+DEBUGGING AND ERROR HANDLING
+
+
+- COMMON PYTHON ERRORS:
+- SyntaxError (Wrong code syntax)
+- NameError (Undefined variable being invoked)
+- TypeError (Wrong usage of Data Types)
+- IndexError (Accessing an index that does not exist)
+- ValueError (Wrong usage of value)
+- KeyError (Trying to access a key that isn't in the dictionary)
+- AttributeError (Using a wrong method)
+
+
+RAISING OUR OWN ERRORS - go back to 21 / 209, 210, 211, 212
+
+
+MODULES - go back to 22
+
+
+OPTIONAL SECTION Making HTTP Requests with Python - go back to 23
+
+
+OOP
+
+
+** from YT
+
+class Employee:
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+        self.email = first + '.' + last + '@company.com'
+    
+    def fullname(self):
+        return f"{self.first} {self.last}"
+
+user1 = Employee('Rommel', 'Torquator', 12000)
+user2 = Employee('Toshi', 'Anthony', 199999)  
+
+print(user1.first)
+print(user1.last)
+print(user1.fullname())
+
+** from YT
+
+
+- REVIEW INSTANCE ATTRIBUTE AND INSTANCE METHOD
+- class User:
+    pass
+- rommel = User()
+
+- class User:
+    def __init__(self, first, last, age):
+        self.first = first
+        self.last = last
+        self.age = age
+
+- rommel = User("Tae", "Gago", 60)
+- print(rommel.first)
+
+- ADDING A METHOD
+- class Person:
+    def __init__(self, first, age):
+        self.first = first
+        self.age = age
+        self.last = "Torquator"
+        
+    def full_name(self):
+        return f"My full name is {self.first} {self.last}"
+        
+    def likes(self, thing):
+        return f"{self.first}' favorite is {thing}"
+- print(rommel.likes("Ice Cream"))
+
+
+CLASS ATTRIBUTES
+
+
+- class Person:
+    active_users = 0 # CLASS ATTRIBUTE
+    
+    def __init__(self, first, age):
+        self.first = first
+        self.age = age
+        self.last = "Torquator"
+	Person.active_users += 1 # TO USE THE ATTRIBUTE
+	print("This run after an instance is created")
+        
+    def full_name(self):
+        return f"My full name is {self.first} {self.last}"
+        
+    def likes(self, thing):
+        return f"{self.first}' favorite is {thing}"
+- print(Person.active_users) # TO SHOW THE VALUE OF THE CLASS ATTRIBUTE OUTSIDE THE CLASS
+
+- class Pet:
+    allowed = ['cat', 'dog', 'fish', 'rat'] # class attribute
+    def __init__(self, name, species): # instance attribute
+        if species not in Pet.allowed:
+            raise ValueError(f"You can't have a {species} pet!")
+        self.name = name
+        self.species = species
+    
+    def set_species(self, species): # instance method
+        if species not in Pet.allowed:
+            raise ValueError(f"You can't have a {species} pet!")
+        self.species = species
+        
+- cat = Pet("Blue", "cat")
+- dog = Pet("Wyatt", "dog")
+- Pet.allowed.append('rabbit')
+- print(Pet.allowed)
+- print(cat.allowed)
+- CREATE A NEW VERSION OF ALLLOWED IN A CAT INSTANCE
+
+
+CLASS METHODS
+
+
+- class User:
+	active_users = 0 # CLASS ATTRIBUTE
+	
+	@classmethod # CLASS METHOD
+	def display_active_users(cls):
+	    return f"There are currently {cls.active_users} active users"
+
+	def __init__(self, first, last, age):
+		self.first = first
+		self.last = last
+		self.age = age
+		User.active_users += 1
+
+	def logout(self):
+		User.active_users -= 1
+		return f"{self.first} has logged out"
+
+	def full_name(self):
+		return f"{self.first} {self.last}"
+
+	def initials(self):
+		return f"{self.first[0]}.{self.last[0]}."
+
+	def likes(self, thing):
+		return f"{self.first} likes {thing}"
+
+	def is_senior(self):
+		return self.age >= 65
+
+	def birthday(self):
+		self.age += 1
+		return f"Happy {self.age}th, {self.first}"
+		
+- user1 = User("Joe", "Smith", 68)
+- user2 = User("Blanca", "Lopez", 41)
+- print(User.display_active_users())
+
+
+THE __repr__ method
+
+
+- class Human:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def __repr__(self):
+        return f"{self.name} is {self.age}"
+        
+- rommel = Human("Rommel", 29)
+- print(rommel)
+
+
+GO BACK TO DECK OF CARDS EXERCISE IN FOLDER 25
+
+
+INHERITANCE
+
+
+- class Animal:
+    cool = True;
+    
+    def make_sound(self, sound):
+        print(f"This animal says {sound}")
+
+- class Cat(Animal):
+    pass
+
+- tosh = Animal()
+- tosh.make_sound("Waaaaaaaaaaaaaaa!!!!!")
+
+- ogre = Cat()
+- ogre.make_sound("Huh!!!!")
+
+- print(isinstance(tosh, Animal))
+- print(isinstance(ogre, Cat))
+
+
+ALL ABOUT PROPERTIES
+
+
+- class Human:
+    def __init__(self, first, last, age):
+        self.first = first
+        self.last = last
+        
+        if age < 0:
+            self._age = 0
+        else:
+            self._age = age
+    
+    @property
+    def age(self):
+        return self._age
+        
+    @age.setter
+    def age(self, value):
+        if value < 0:
+            self._age = 0
+        else:
+            self._age = value
+            
+- jane = Human("Jane", "Goodall", 34)
+- print(jane.age)
+- jane.age = 20
+- print(jane.age)
+
+
+super()
+
+
+- class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+    
+- class Cat(Animal):
+    def __init__(self, name, breed, toy):
+        super().__init__(name, species="Cat") 
+        self.breed = breed
+        self.toy = toy
+        
+- meow = Cat("Dog", "Puskal", "String")
+- print(meow.name)
+- print(meow.species)
+- print(meow.toy)
+
+- GO BACK TO 256
+
+
+MULTIPLE INHERITANCE 258
+
+
+MRO - Method Resolution Order 259
+
+
+POLYMORPHISM
+
+
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+

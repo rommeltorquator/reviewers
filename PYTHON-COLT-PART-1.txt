@@ -1,0 +1,936 @@
+19T091090
+
+manlikepasscodedaffodilbarrack
+
+WINDOWS COMMAND LINE
+
+- pwd (shows folder directory)
+- ls
+- cd images
+- cd .. (to go back to the previous folder)
+
+- mkdir image
+- touch index.html
+
+- rm index.html
+- rm -r images (to remove folder)
+
+
+INTS AND FLOATS
+
+
+- 4, 5, 100 (int)
+- 97.2, 23.00232, 0.0 (float)
+- type(100) (to determine the data type of 100)
+- 1 + 1.0 = 2.0 (returns a float value)
+
+
+BASIC MATH
+
+
+- +, -, // (integer division), *, / (float division)
+- PEMDAS (parenthesis, exponents, multiplication, division, addition, subtraction)
+
+
+COMMENTS
+
+
+- # this is a fucking comment
+
+
+WEIRDER OPERATORS
+
+
+- ** (exponentiation)
+- % (modulo)
+- // (integer division)
+
+
+PYTHON DOCUMENTATION - go to python.org
+
+
+VARIABLES
+
+
+- name = "Rommel"
+- age = 29
+- job = "Developer"
+- REASSIGNING VARIABLE TO ANOTHER VARIABLE EXAMPLE
+- name, age, job = "Rommel", 29, "Developer"
+
+
+VARIABLE NAMING RESTRICTIONS AND CONVENTIONS
+
+
+- MUST START WITH A LETTER OR UNDERSCORE
+- CAN ONLY USE LETTERS AND NUMBERS
+- NAMES ARE CASE SENSITIVE
+
+- ex. first_name, firstName, salary, TAX (constant naming convention), Employee (class naming convention), __init__ (dunder naming convention)
+
+
+DATA TYPES
+
+
+- bool - True, False 
+- int - 1, 100, 29
+- float - 20.3245
+- str - "This is a string"
+- list - [1, 2, 45, 6]
+- dict - {"name": "Rommel", "age": 29}
+- etc...
+
+
+DYNAMIC TYPING
+
+
+- ABLE TO CHANGE THE VALUE OF AN EXISTING VARIABLE
+- CAN CHANGE TO ANOTHER DATA TYPE
+
+
+THE SPECIAL VALUE None
+
+
+- name = None (variable name exists but no value and data type)
+
+
+STRINGS
+
+
+- name = "Rommel" (best to use double quote)
+- ESCAPE SEQUENCES (\n, \t, \', \", \\)
+
+- STRING CONCATENATION "This is string 1" + " " + "String 2"
+- CANNOT CONCATENATE STRING WITH OTHER DATA TYPES
+- name += "Torquator"
+
+- FORMATTING STRING
+- name = "Rommel"
+- print(f"My name is {name}, and I am {10 + 19} years old") 
+
+- STRING AND INDEXES
+- name = "Rommel"
+- print(name[0]) # it shows R
+- print(names[-1]) # it shows l
+- STRING IS ITERABLE, CAN BE LOOPED WITH FOR AND WHILE
+
+
+CONVERTING DATA TYPES
+
+
+- decimal = 10.99
+- integer = int(decimal)
+- my_string = str(integer)
+- my_bool = bool("True")
+- my_float = float(20)
+- my_list = list([1, 2, 3, 4, 5])
+
+
+BULDING A MILEAGE CONVERTER - # this is just an exercise - 07 / 059
+
+
+GETTING USER INPUT
+
+
+- name = input("Please enter your name: ")
+- THE INPUT IS SAVED AS A STRING
+
+
+CONDITIONAL STATEMENT
+
+
+name = "Rommel"
+
+if name == "Rommel":
+    print("This is true")
+elif name == "Toshi":
+    print("This is Toshi")
+else:
+    print("This is false")
+
+- YOU CAN USE MULTIPLE ELIFS
+
+
+TRUTHINESS and FALSINESS
+
+
+- x = 1
+- print(x is 1) # True
+- FALSE VALUES = 0, "", None, empty object
+
+
+COMPARISON OPERATORS
+
+
+- ==, !=, <, >, <=, >=
+- is COMPARISON OPERATOR IS USED TO CHECK THE VALUE AND STORAGE IN MEMORY
+
+
+LOGICAL AND, OR
+
+
+name = "Rommel"
+age = 29
+
+if name == "Rommel" and age == 29:
+    print("This is true")
+elif name == "Toshi" or age == 30:
+    print("This is Toshi")
+else:
+    print("This is false")
+
+
+LOGICAL NOT
+
+
+- age = 4
+- print(not age < 8)
+
+
+BOUNCER CODE-ALONG EXERCISE - 08 / 072
+
+
+ROCK, PAPER, SCISSOR GAME - 09 / 075
+
+
+FOR LOOP
+
+
+- names = ["Tae", "Tao", "Dubi", "Dumbass"]
+- ITERABLES - string, list, range, dictionary, tuple, set
+for x in range(10):
+    print(x)
+
+for char in "Hello":
+    print(char)
+
+- RANGE
+- range(10), range(1, 11), range(1, 11, 2) # 2 is the skip
+
+
+WHILE LOOP
+
+
+- can't loop set using while loop
+
+msg = input("What's the secret password? ")
+while msg!= "bananas":
+    print("Wrong!")
+    msg = input("What's the secret password? ")
+print("Correct!")
+
+num = 1
+while num < 10:
+    print(num)
+    num += 1
+
+
+BREAK KEYWORD
+
+
+- BREAK IS USED TO EXIT THE LOOP OR IF STATEMENT
+while True:
+    msg = input("Please say stop ")
+    if msg == "stop":
+        break
+print("I'm out on while loop")
+
+
+GUESSING GAME - 10 / 093
+
+
+LIST
+
+
+- tasks = ["Play", "Sleep", "Study"]
+- names = list(["Rommel", "Tae", "Tao"])
+
+- YOU CAN ALSO STORE VARIABLE IN LIST
+- len(tasks) # to count the number of elements in a list
+
+- CREATE A LIST OF NUMBERS USING RANGE
+
+- names[0] # to access an element in list
+- names[-1] # to access the last element in list
+
+- "Rommel" in names # returns True
+
+- ITERATING LIST USING for AND while LOOP
+
+- ADDING ELEMENTS IN LIST, APPEND, EXTEND, INSERT
+- names.append("Ogre") # append
+- names.append(["Lina", "Meepo"]) # it adds as one element
+- names.extend(["Lina", "Meepo"]) # to add 2 or more elements
+- names.insert(3, "Invoker") # adds Invoker in index 3
+- YOU CAN ALSO USE NEGATIVE NUMBER IN INSERT
+
+- REMOVING ELEMENTS IN LIST, CLEAR, POP, REMOVE
+- names.clear()
+- names.pop() # removes the very last element
+- names.pop(2) # removes the element in index 2
+- names.remove("Abby") # removes the "Abby" element in names list
+
+- INDEX, COUNT, SORT, REVERSE, JOIN
+- names.index("Rommel") # give the index of "Rommel" element
+- names.index("Rommel", 2) # 2 is the start point
+- names.index("Rommel", 2, 10) # 2 is the start point and 8 is the end point
+- nums.count(20) # return the number of times 20 is in the list
+- names.reverse()
+- names.sort() # sort elements in ascending order
+
+- words = ["coding", "is", "fun"]
+- combined = ' '.join(words) # joined using space
+
+
+SLICING IN LIST
+
+
+- names[1: 10: 2] # 1 is start, 10 is end, 2 is the step
+- names[2:]
+- names[-3:]
+- names[:-3]
+- names[::-1] # to reverse the list
+- nums[::2] # to implement the steps
+- SLICING CAN BE USED AS WELL IN STRINGS
+- names[0][::-a] # SLICING THE ELEMENT IN A STRING
+
+
+SWAPPING VALUES IN LIST
+
+
+- names = ["Tae", "Tao"]
+- names[0], names[1] = names[1], names[0]
+
+
+LIST COMPREHENSION
+
+
+- nums = [1, 2, 3]
+- new = [x * 2 for x in nums]
+- print(new)
+
+- LIST COMPREHENSION IN STRING
+- name = "rommel"
+- new = [c.upper() for c in name]
+- print(new)
+
+- LIST COMPREHENSION WITH CONDITIONAL LOGIC
+- nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+- evens = [x for x in nums if x % 2 == 0] # if
+- print(evens)
+
+- nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+- new = [x * 2 if x % 2 == 0 else x / 2 for x in nums] # if and else
+- print(new)
+
+- consonants = ''.join([x for x in 'This is so much fun!' if x not in 'aeiou'])
+- print(consonants)
+
+- NESTED LIST
+- nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+- print(nested_list[0][2]) # shows 3
+
+- nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+- for x in nested_list:
+    for y in x:
+        print(y)
+
+- NESTED LIST COMPREHENSION
+- nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+- new = [[print(y) for y in x] for x in nested_list]
+
+
+DICTIONARIES
+
+
+- CONSISTS OF KEY VALUE PAIRS
+- cat = {
+    "name": "blue",
+    "age": 3.5,
+    "isCute": True
+}
+- cat2 = dict(name="kitty", age=20)
+- print(cat2["name"])
+- print(cat2["age"])
+
+- cat.keys()
+- cat.values()
+- cat.items()
+
+- LOOPING A DICTIONARY, ITERATING A DICTIONARY
+- for x in cat: # loops the keys of the dictionary
+    print(x)
+
+- for x in cat.values(): # loops the values of the cat dictionary
+    print(x)
+
+- for x, y in cat.items():
+    print(f"{x} is the key, and {y} is the value") # loops the keys and values
+
+- USING in WITH DICTIONARIES
+- print("name" in cat) # returns true or false
+- if "name" in cat:
+    print("It's there!")
+  else:
+    print("Not there!")
+
+- if "blue" in cat.values(): # checks if "blue" is in values
+    print("It's there!")
+  else:
+    print("Not there!")
+
+- DICTIONARY METHODS CLEAR, COPY, FROMKEYS, GET
+- cat.clear()
+- new = cat.copy()
+- new = {}.fromkeys(range(10), "unknown")
+- new = dict.fromkeys(["name", "age", "email", "job"], "unknown")
+- print(cat.get("age")) # it gets the value of the key
+
+- POP, POPITEM, UPDATE
+- cat.pop("name") # removes the element with a name key
+- cat.popitem() # removes a random element in a dictionary
+- cat.update(cat2) # it adds the cat2 dictionary to cat dictionary
+
+
+SPOTIFY PLAYLIST EXAMPLE - 14 / 133
+
+
+DICTIONARY COMPREHENSION
+
+
+- nums = {
+    "first": 1,
+    "second": 2,
+    "third": 3
+}
+- squared = {x : y * 2 for x, y in nums.items()}
+- print(squared)
+
+- s = {x: x * 2 for x in [1, 2, 3, 4, 5]}
+- print(s)
+
+- ch = {
+    "name": "Tae",
+    "city": "Makati",
+    "instructor": "Toshi"
+}
+- yelling_instructor = {x: y.upper() for x, y in ch.items()}
+- print(yelling_instructor)
+
+- ADD MORE DICTIONARY COMPREHENSION EXAMPLES
+
+- DICTIONARY COMPREHENSION WITH CONDITIONAL LOGIC
+- num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+- new = {x: ("even" if x % 2 == 0 else "odd") for x in num_list}
+- print(new)
+
+- ch = {
+    "name": "Tae",
+    "city": "Makati",
+    "instructor": "Toshi"
+}
+- new = {(x.upper() if x == "name" else x): y for x, y in ch.items()}
+- print(new)
+
+
+TUPLES
+
+
+- IT IS IMMUTABLE
+- FASTER THAN LISTS
+- ORDERED COLLECTION OF ELEMENTS
+
+- alphabet = ('a', 'b', 'c', 'd', 'e')
+- print(a[3])
+
+- TUPLES CAN BE USED AS A KEY IN DICTIONARY
+- locations = {
+    (1, 2): "Tokyo",
+    (3, 4): "China",
+    (4, 5): "Manila"
+}
+- print(locations[(1, 2)])
+
+- ITEMS (returns a list of tuples by converting a dictionary)
+- locations = {
+    "name": "Tokyo",
+    "age": "China",
+    "job": "Manila"
+}
+- print(locations.items())
+
+- LOOPING TUPLE USING FOR, WHILE example
+
+- TUPLE METHODS, COUNT, INDEX
+- t = (1, 2, 3, 1, 1, 1)
+- print(t.count(1))
+- t.index(1)
+- t.index(1, 3)
+
+- NESTED TUPLE
+- t = (1, 2, ('A', 'B'), 1, 1, 1)
+- SLICES CAN BE USED IN TUPLE
+
+
+SETS
+
+
+- DO NOT HAVE DUPLICATE VALUES
+- ELEMENTS ARE NOT STORED IN ORDER
+
+- s = {1, 2, 3, 4, 5}
+- s = set({1, 2, 3, 4, 5})
+- CANNOT BE ACCESSED USING INDEX
+
+- LOOPING SET USING FOR AND WHILE LOOP
+
+- 1 in s # returns true
+
+- METHODS IN SET, ADD, REMOVE, DISCARD, COPY, CLEAR
+- s = {1, 2, 3, 4, 5}
+- s.add("Tae")
+
+- s.remove(2)
+- s.discard("gago") # to avoid having error
+- s.clear()
+
+- s = {1, 2, 3, 4, 5}
+- t = s.copy()
+
+- math_students = {"matt", "helen", "prashant", "james", "aparna"}
+- bio_students = {"jane", "matt", "charlotte", "mesut", "oliver", "james"}
+
+- SET MATH (UNION, INTERSECTION, SYMMETRIC DIFFERENCE)
+- all_students = math_students | bio_students # UNION
+- common_students = math_students & bio_students # INTERSECTION
+- no_duplicates = math_students ^ bio_students # SYMMETRIC DIFFERENCE
+
+
+SET COMPREHENSION
+
+
+- nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+- new = {x * 2 for x in nums}
+
+- statement = "This is a non-vowel statement. Fuck the police"
+- new = {c for c in statement if c in 'aeiou'}
+
+- WITH IF
+- evens = {x for x in nums if x % 2 == 0}
+
+- WITH IF ELSE
+- evens = {x * 2 if x % 2 == 0 else x - 1 for x in nums}
+
+
+FUNCTIONS
+
+
+- FUNCTION IS USED TO AVOID CODE DUPLICATION
+- STAY DRY (don't repeat yourself)
+
+- DEFINING FUNCTION
+- def say_hi():
+    print("Hi!")
+- say_hi() # TO INVOKE THE FUNCTION
+
+- RETURNING VALUES FROM FUNCTION
+- def squared():
+     return 7 ** 2 # TO RETURN A VALUE
+- print(squared())
+
+- WITH PARAMETERS
+- def square(num):
+    return num * num
+
+- PARAMETER IS THE DECLARATION, ARGUMENTS ARE THE THE ONES PASSED BY USER
+
+- DEFAULT PARAMETERS
+- def square(x, y=2):
+    return x ** y
+- print(square(2, 10))
+
+- KEYWORD ARGUMENTS
+- ADDS FLEXIBILITY ON PASSING ARGUMENTS
+- def square(x, y=2):
+    return x ** y
+- print(square(y=10, x=2))
+
+- FUNCTION SCOPE
+- GLOBAL VARIABLE
+- total = 0
+- def increment():
+    global total # TO BE ABLE TO MANIPULATE A GLOBAL VARIABLE INSIDE A FUNCTION
+    total +=1
+    return total
+
+- NONLOCAL IS USED TO MANIPULATE A VARIABLE INSIDE A FUNCTION
+
+- DOCSTRING
+- def increment():
+    """This is a comment inside a function""" # DOCSTRING INITIALIZATION
+    global total
+    total +=1
+    return total
+- print(increment.__doc__) # INVOKING DOCSTRING
+- ALL BUILT-IN FUNCTIONS HAVE .__doc__
+
+
+FUNCTIONS PART 2
+
+
+- *ARGS
+- COMPILES ALL THE ARGUMENTS AS TUPLE
+- def total(*args):
+    total = 0
+    for x in args:
+        total += x
+    return total
+- print(total(2, 4, 45, 1, 3, 2, 4))
+
+- **KWARGS
+- COMPILES THE ARGUMENTS AS DICTIONARY
+- def fav_color(**kwargs):
+    for x, y in kwargs.items():
+        print(f"{x} is the key, {y} is the value")
+- fav_color(rommel="Orange", steph="Pink", Toshi="Blue")
+
+- PARAMETER ORDERING
+- PARAMETERS, *ARGS, DEFAULT PARAMETERS, **KWARGS
+
+
+TUPLE UNPACKING
+
+
+- USED WHEN PASSING A LIST OR TUPLE AS AN ARGUMENT IN A FUNCTION
+- nums = [1, 2, 3, 4, 5]
+- def sum(*args):
+    total = 0
+    for x in args:
+        total += x
+    return total
+- print(sum(*nums))
+
+
+DICTIONARY UNPACKING
+
+
+- USED WHEN PASSING A DICTIONARY AS AN ARGUMENT IN A FUNCTION
+- nums = {
+    "a": 1,
+    "b": 2,
+    "c": 3
+}
+- def add_nums(a, b, c):
+    return a + b + c
+- print(add_nums(**nums))
+
+
+LAMBDA
+
+
+- squared = lambda x: x * x
+- print(squared(3))
+
+- sum = lambda x, y: x + y
+- print(sum(10, 30))
+
+- greet = lambda: "Hello, this is created using Lambda"
+- print(greet())
+
+
+MAP
+
+
+- ACCEPTS 2 ARGS, LAMBDA AND AN ITERABLE (STRING, LIST, DICTIONARY, TUPLE, SET)
+- CAN CHANGE THE VALUE OF THE ITERABLE
+- nums = [2, 4, 6, 8, 10]
+- doubles = list(map(lambda x: x * 2, nums))
+- print(doubles)
+
+- names = ["Toshi", "Melo", "Rommel", "Toshiro"]
+- all_caps = list(map(lambda name: name.upper(), names))
+- print(all_caps)
+
+- customers = [
+    {
+        "name": "Rommel",
+        "age": 20
+    },
+    {
+        "name": "Toshi",
+        "age": 20
+    },
+    {
+        "name": "Melo",
+        "age": 20
+    }
+]
+- names = list(map(lambda x: x["name"], customers))
+- print(names)
+
+
+FILTER
+
+
+- NEEDS TO RETURN TRUE OR FALSE
+- names = ["Angel", "Arnold", "Toshi", "Melo", "Rommel", "Anna"]
+- with_a = list(filter(lambda n: n[0] == "A", names))
+- print(with_a)
+
+
+COMBINING FILTER AND MAP
+
+
+# FIND THE NAMES THAT ARE LESS THAN 5 CHARACTERS (4)
+- names = ["Angel", "Arnold", "Toshi", "Melo", "Rommel", "Anna", "Tae", "Gago"]
+- less_than_5 = list(map(lambda x: x.upper(), filter(lambda name: len(name) < 5, names)))
+- print(less_than_5)
+
+- IF POSSIBLE, BETTER USE LIST COMPREHENSION OR OTHERS
+
+
+ALL
+
+
+- RETURNS TRUE IF ALL ELEMENTS IN AN ITERABLE ARE TRUTHY
+- names = ["Angel", "Arnold", "Toshi", "Melo", "Rommel", "Anna", "Tae", "Gago"]
+- print(all(names))
+
+
+ANY
+
+
+- RETURNS TRUE IF 1 ELEMENT IN AN ITERABLE IS TRUTHY
+- elements = ['', 0, False, "Toshi", "Tae"]
+- print(any(elements))
+
+
+GENERATOR EXPRESSION - 20 / 191
+
+
+- TAKES LESS SPACE COMPARED TO LIST COMPREHENSION
+- USED WHEN PASSING TO FUNCTION LIKE ALL AND ANY
+- gen_exp = sys.getsizeof(x * 10 for x in range(1000))
+
+
+SORTED
+
+
+- BUILT-IN FUNCTIONS THAT WORKS IN ITERABLES
+- nums = [10, 2, 4, 7, 1]
+- print(sorted(nums))
+- print(nums) # NUMS REMAINS UNCHANGED
+
+- REVERSE
+- sorted(nums, reverse=True)
+
+users = [
+	{"username": "samuel", "tweets": ["I love cake", "I love pie", "hello world!"]},
+	{"username": "katie", "tweets": ["I love my cat"]},
+	{"username": "jeff", "tweets": [], "color": "purple"},
+	{"username": "bob123", "tweets": [], "num": 10, "color": "teal"},
+	{"username": "doggo_luvr", "tweets": ["dogs are the best", "I'm hungry"]},
+	{"username": "guitar_gal", "tweets": []}
+]
+
+# To sort users by their username
+sorted(users,key=lambda user: user['username'])
+
+# Finding our most active users...
+# Sort users by number of tweets, descending
+sorted(users,key=lambda user: len(user["tweets"]), reverse=True)
+
+# ANOTHER EXAMPLE DATA SET==================================
+songs = [
+	{"title": "happy birthday", "playcount": 1},
+	{"title": "Survive", "playcount": 6},
+	{"title": "YMCA", "playcount": 99},
+	{"title": "Toxic", "playcount": 31}
+]
+
+# To sort songs by playcount
+sorted(songs, key=lambda s: s['playcount'])
+
+
+MAX AND MIN
+
+
+- MAX
+- nums = [1, 100, 23, 46, 3, 33]
+- print(max(nums))
+- max(100, 250, 2, 1, 3, 6)
+- max("Hello World") # RETURNS r
+
+- MIN
+- nums = [1, 100, 23, 46, 3, 33]
+- print(min(nums))
+- min(100, 250, 2, 1, 3, 6)
+- min("Hello World") # RETURNS SPACE
+
+names = ['Arya', "Samson", "Dora", "Tim", "Ollivander"]
+
+# finds the minimum length of a name in names
+min(len(name) for name in names) # 3
+
+# find the longest name itself
+max(names, key=lambda n:len(n)) #Ollivander
+
+songs = [
+	{"title": "happy birthday", "playcount": 1},
+	{"title": "Survive", "playcount": 6},
+	{"title": "YMCA", "playcount": 99},
+	{"title": "Toxic", "playcount": 31}
+]
+
+# Finds the song with the lowest playcount
+min(songs, key=lambda s: s['playcount']) #{"title": "happy birthday", "playcount": 1}
+
+# Finds the title of the most played song
+max(songs, key=lambda s: s['playcount'])['title'] #YMCA
+
+
+REVERSED
+
+
+- names = ["Rommel", "Mabel", "Abby", "Lhen"]
+- rev = list(reversed(names))
+- print(rev)
+
+- rev = list(reversed("Hello Fucking World"))
+- print(''.join(rev))
+
+
+LEN
+
+
+- print("Hello".__len__())
+
+
+ABS, SUM, ROUND
+
+
+- ABS
+- print(abs(-100))
+
+- import math
+- print(math.fabs(-100)) # RETURNS A FLOAT ABSOLUTE VALUE
+
+- SUM
+- nums = [10, 20, 30]
+- total = sum(nums, 100)
+- print(total)
+
+- ROUND
+- print(round(100.99773123122131))
+
+
+ZIP
+
+
+- nums1 = [10, 20, 30, 40, 50]
+- names = ["Rommel", "Toshi", "Abby", "Toshiro", "Mabel"]
+- combined = list(zip(nums1, names))
+- print(combined)
+
+- CAN BE USED TO CREATE A DICTIONARY
+
+- num1 = [1, 23, 55]
+- num2 = [100, 32, 3]
+- for x, y in zip(num1, num2):
+    print(f"{x} + {y} = {x + y}")
+
+- midterms = [80, 91, 78]
+- finals = [98, 89, 53]
+- students = ['dan', 'ang', 'kate']
+
+- final_grades = {pair[0]: max(pair[1], pair[2]) for pair in zip(students, midterms, finals)}
+- print(final_grades)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

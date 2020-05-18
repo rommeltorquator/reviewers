@@ -1,0 +1,42 @@
+LIST METHODS IN PYTHON
+
+
+- names = ['rommel', 'abby', 'melo', 'toshi', 'rommel', 'rommel']
+- print(names.count('rommel')) # COUNT
+
+- print(names.index('rommel')) # INDEX
+- print(names.index('rommel', 2)) # INDEX
+
+- names.append('tarzan')
+- names.extend([1, 2, 3, 4, 5])
+- names.insert(0, 'FIRST')
+
+- names.remove('abby')
+- names.pop() # REMOVES THE LAST ELEMENT OF THE LIST
+
+- names.reverse()
+- names.sort()
+
+
+DICTIONARY METHODS IN PYTHON
+
+
+- dict = {
+    "name": "tae",
+    "age": 20
+}
+- dict2 = dict.copy()
+- dict.update({"sex": True, "money": 1000000000}) # TO ADD
+
+- dict.keys()
+- dict.values()
+- dict.items()
+
+- dict.clear()
+- dict.pop("name") # NAME IS A KEY
+- dict.popitem() # REMOVES THE LAST ELEMENT
+
+- print(dict.get("name")) # DISPLAYS THE VALUE OF THE GIVEN KEY
+- new = {}.fromkeys((1, 2, 3), 10) # arg 1 = (TUPLE, LIST, RANGE, SET), arg 2 = value
+
+- setdefault ?????
