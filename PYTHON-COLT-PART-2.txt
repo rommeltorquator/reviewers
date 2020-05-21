@@ -126,7 +126,7 @@ MODULES
 import file1 # put this inside file2
 
 - run the functions declared inside file1
-print(file.greet()) # run this inside file2
+print(file1.greet()) # run this inside file2
 
 - from file1 import greet as g # other way of importing
 
@@ -135,13 +135,12 @@ print(file.greet()) # run this inside file2
 
 
 - go to https://pypi.org/ for list of modules available, pip
-
 - installing the termcolor package
 python -m pip install termcolor # command to install a module
 help(termcolor) # to see the available functions and options
 
-
-from termcolor import colored
+- import termcolor after installing it in the command line
+from termcolor import colored 
 t = colored("This is it! You're progressing", color="blue", on_color="on_magenta", attrs=["blink"])
 print(t)
 
@@ -355,19 +354,142 @@ class User:
 # print(User.display_active_users())
 
 
+*** another way of creating instance using a classmethod
 
 
-go back to 24 - 246
+# A User class with both instance attributes and instance methods
+class User:
+	active_users = 0
+
+	@classmethod
+	def display_active_users(cls):
+		return f"There are currently {cls.active_users} active users"
+
+	@classmethod # class method used for creating another instance
+	def from_string(cls, data_str):
+		first,last,age = data_str.split(",")
+		return cls(first, last, int(age))
+
+	def __init__(self, first, last, age):
+		self.first = first
+		self.last = last
+		self.age = age
+		User.active_users += 1
+
+	def logout(self):
+		User.active_users -= 1
+		return f"{self.first} has logged out"
+
+	def full_name(self):
+		return f"{self.first} {self.last}"
+
+	def initials(self):
+		return f"{self.first[0]}.{self.last[0]}."
+
+	def likes(self, thing):
+		return f"{self.first} likes {thing}"
+
+	def is_senior(self):
+		return self.age >= 65
+
+	def birthday(self):
+		self.age += 1
+		return f"Happy {self.age}th, {self.first}"
+
+tom = User.from_string("Tom,Jones,89") # invoked the class method to create a new instance
+
+print(tom.first)
+print(tom.full_name())
+print(tom.birthday())
 
 
+*** the __repr__ method
 
 
+- used to show a definition of an instance
+class User:
+	active_users = 0
+
+	@classmethod
+	def display_active_users(cls):
+		return f"There are currently {cls.active_users} active users"
+
+	@classmethod # class method used for creating another instance
+	def from_string(cls, data_str):
+		first,last,age = data_str.split(",")
+		return cls(first, last, int(age))
+
+	def __init__(self, first, last, age):
+		self.first = first
+		self.last = last
+		self.age = age
+		User.active_users += 1
+
+        def __repr__(self): # to declare a __repr__
+        	return {'name':self.name, 'age':self.age}
+        
+	def logout(self):
+		User.active_users -= 1
+		return f"{self.first} has logged out"
+
+	def full_name(self):
+		return f"{self.first} {self.last}"
+
+	def initials(self):
+		return f"{self.first[0]}.{self.last[0]}."
+
+	def likes(self, thing):
+		return f"{self.first} likes {thing}"
+
+	def is_senior(self):
+		return self.age >= 65
+
+	def birthday(self):
+		self.age += 1
+		return f"Happy {self.age}th, {self.first}"
+
+tom = User.from_string("Tom,Jones,89") # invoked the class method to create a new instance
+
+print(tom.first)
+print(tom.full_name())
+print(tom.birthday())
+print(tom) # to invoke what is the string declared in the repr
 
 
+25 DECK OF CARD EXERCISE - GO BACK HERE
 
 
+OOP part 2
 
 
+*** inheritance and objectives
+
+
+class Animal:
+	cool = True
+
+	def make_sound(self, sound):
+		print(f"this animal says {sound}")
+
+
+# Cat class inherits from Animal
+class Cat(Animal):
+	pass
+
+# Make a new cat instance
+blue = Cat()
+
+# Because of inheritance, a Cat has access to:
+blue.make_sound("Meow")
+print(blue.cool)
+
+#blue is both a Cat and Animal (and base object)
+print(isinstance(blue, Cat))
+print(isinstance(blue, Animal))
+print(isinstance(blue, object))
+
+
+*** properties go to 26 / 254
 
 
 
