@@ -74,7 +74,7 @@ except:
 
 # Be careful with variable names!
 def add_numbers(a, b, c, d):
-    import pdb; pdb.set_trace() 
+    import pdb; pdb.set_trace()
 
     return a + b + c + d
 add_numbers(1,2,3,4)
@@ -181,10 +181,13 @@ help(list) # to see the other methods of this list class
 class User:
   pass
 
+# creating a class instance
 user1 = User()
 print(type(user1))
 
+
 *** adding instance attributes
+
 
 class User:
   def __init__(self, first, last, age): # 3 instance attributes
@@ -245,7 +248,6 @@ class User:
 	def birthday(self): # instance methods
 		self.age += 1
 		return f"Happy {self.age}th, {self.first}"
-
 
 user1 = User("Joe", "Smith", 68)
 user2 = User("Blanca", "Lopez", 41)

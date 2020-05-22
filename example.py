@@ -1,7 +1,8 @@
-from termcolor import colored
-import pyfiglet
+import example2 as e
 
-t = colored("This is it! You're progressing", color="blue", on_color="on_magenta", attrs=["blink"])
-print(t)
+def sex():
+	print("Let's have sex")
 
-help(pyfiglet)
+e.greet()
+sex()
+print(sex.__name__)
