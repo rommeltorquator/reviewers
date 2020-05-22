@@ -491,15 +491,51 @@ print(isinstance(blue, Animal))
 print(isinstance(blue, object))
 
 
-*** properties go to 26 / 254
+*** properties 
+
+
+class Person:
+  def __init__(self, first, last):
+    self.first = first
+    self.last = last
+  
+  @property
+  def full(self):
+    return f"{self.first} {self.last}"
+
+  @full.setter
+  def full(self, el):
+    self.first, self.last = el.split(' ')
+
+rommel = Person("Rommel", "Torquator")
+rommel.full = "Toshi Pogi"
+print(rommel.full)
+
+
+*** super().__init__()
+
+
+class Animal:
+  def __init__(self, name, species):
+    self.name = name
+    self.species = species
+
+class Tiger(Animal):
+  def __init__(self, name, food, likes):
+    super().__init__(name, species="Tiger")
+    self.food = food
+    self.likes = likes
+
+kobe = Tiger("Kobe", "Cat meat", "Kill")
+print(kobe.food)
+jordan = Animal("Jordan", "Shark")
+print(jordan.species)
 
 
 
 
 
-
-
-
+go back to 26 / 256
 
 
 
