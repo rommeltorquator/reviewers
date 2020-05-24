@@ -650,19 +650,55 @@ print(help(Penguin))
 - In programming, if a variable can hold more than one type of value, then that's a kind of polymorphism
 
 
-*** special __magic__ methods go back to 26 / 262
+*** special __magic__ methods, dunder methods
+
+
+class Employee:
+
+    raise_amt = 1.04
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@email.com'
+        self.pay = pay
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amt)
+
+    def __repr__(self): # magic method
+        return "Employee('{}', '{}', {})".format(self.first, self.last, self.pay)
+
+    def __str__(self): # magic method
+        return '{} - {}'.format(self.fullname(), self.email)
+
+    def __add__(self, other): # magic method
+        return self.pay + other.pay
+
+    def __len__(self): # magic method
+        return len(self.fullname())
+
+emp_1 = Employee('Corey', 'Schafer', 50000)
+emp_2 = Employee('Test', 'Employee', 60000)
+
+# print(repr(emp_1))
+# print(str(emp_2))
+# print(emp_1 + emp_2) # add method
+
+print(len(emp_1)) # len method
+
+- isinstance(rommel, Human) # this is useful, it return true or false
+- there are different magic methods, just seach it online
 
 
 
 
 
 
-
-
-
-
-
-
+27 - 265
 
 
 
