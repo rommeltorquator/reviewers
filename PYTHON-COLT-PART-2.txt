@@ -566,6 +566,7 @@ class Ambulatory:
 
 class Penguin(Ambulatory, Aquatic):
   def __init__(self,name):
+
     print("PENGUIN INIT!")
     super().__init__(name=name)
     # Ambulatory.__init__(self,name=name)
