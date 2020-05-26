@@ -651,7 +651,7 @@ print(help(Penguin))
 - In programming, if a variable can hold more than one type of value, then that's a kind of polymorphism
 
 
-*** special __magic__ methods, dunder methods
+*** special __magic__ methods, dunder methods, special methods
 
 
 class Employee:
