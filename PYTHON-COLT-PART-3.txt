@@ -1,0 +1,24 @@
+ITERATORS GENERATORS
+
+
+*** iterators vs iterables
+
+
+- iterable = lists, strings, tuples, dictionary, sets
+- iterable is capable of creating an iterator
+- to be an iterable, you need to create your own iterator
+
+dir(list) # this returns all properties and methods of an object
+
+- every iterables have __iter__ method
+
+- iter() and next() methods
+names = ["Abby", "Mabel", "Steph"]
+iter_obj = iter(names)
+
+print(next(iter_obj))
+print(next(iter_obj))
+print(next(iter_obj))
+
+
+*** writing our version of for loop 27 267
