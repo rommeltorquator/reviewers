@@ -21,4 +21,123 @@ print(next(iter_obj))
 print(next(iter_obj))
 
 
-*** writing our version of for loop 27 267
+*** writing our version of for loop
+
+
+def my_for(itr):
+  i = iter(itr) # iterator
+  while True:
+    try:
+      print(next(i)) # iterating the list
+    except StopIteration:
+      break
+
+my_for([1, 2, 3])
+
+-----
+
+names = ["Rommel", "Toshi"]
+
+def show_names(i):
+  it = iter(i)
+  while True:
+    try:
+      print(next(it))
+    except StopIteration:
+      break
+
+show_names("Rommel")
+
+
+*** writing a custom iterator
+
+
+class Customers:
+  def __init__(self, names):
+    self.names = names.split(' ')
+    self.index = 0
+  
+  def __iter__(self):
+    return self
+  
+  def __next__(self):
+    if self.index >= len(self.names):
+      raise StopIteration
+    i = self.index
+    self.index += 1
+    return self.names[i]
+
+custs = Customers("This is a sample iterator")
+for x in custs:
+  print(x)
+
+
+
+
+
+
+
+go back to 27 - 269
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
