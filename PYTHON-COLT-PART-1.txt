@@ -486,7 +486,7 @@ SETS
 
 - 1 in s # returns true
 
-- METHODS IN SET, ADD, REMOVE, DISCARD, COPY, CLEAR
+- METHODS IN SET, ADD, REMOVE, DISCARD, CLEAR, COPY
 - s = {1, 2, 3, 4, 5}
 - s.add("Tae")
 
