@@ -180,6 +180,12 @@ print(laugh())
 *** decorators
 
 
+- decorators are functions
+- examples of higher order functions
+- enhances other functions behaviors
+- alters the functionality of your functions
+
+- takes another function as an argument, add new method and returns a function
 
 
 
